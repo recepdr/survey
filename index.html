@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Funny Survey </title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap');
+
+      :root {
+        --turqoise: rgba(87, 235, 222, 0.7);
+        --green-yellow: rgba(167, 250, 23, 0.7);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Bellota, cursive;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      ::-webkit-input-placeholder {
+        font-family: Bellota;}
+
+      #dropdown {
+        font-family: Bellota;
+        font-weight: 500;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background: orangered;
+        background-image: linear-gradient(
+          270deg, var(--turqoise), var(--green-yellow)), url(https://bilsemingilizce.weebly.com/uploads/1/1/9/8/119868229/ads-z-tasar-m_orig.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .container {
+        width: 100%;
+        margin: 3.2rem auto 0 auto;
+      }
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+      .description {
+        text-shadow: 1px 1px 1px rgba(63, 8, 26, 0.5);
+        font-weight: bold;
+      }
+      .head-text {
+        text-align: center;
+        font-weight: 900;
+      }
+      form {
+        background: rgba(52, 9, 79, 0.795);
+        color: #E5E5E5;
+        padding: 2.5rem 0.5rem;
+        border-radius: 0.7rem;
+        box-shadow: 10px 10px 8px #888888;
+      }
+
+      @media (min-width: 480px) {
+        form {
+          padding: 2.5rem;
+        }
+      }
+
+      .form-group {
+        
+        margin: 0 auto 1.25rem auto;
+        padding: 0.3rem;
+        border-style: solid;
+        border-radius: 0.7rem;
+        border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+        border-image-slice: 1;
+      }
+      .form-group-checkbox {
+        display: flex;
+        flex-flow: column;
+        margin: 0 auto 1.25rem auto;
+        padding: 0.3rem;
+        border-style: solid;
+        border-radius: 0.7rem;
+        border-image-source: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+        border-image-slice: 1;
+      }
+
+      .form-control {
+        display: block;
+        width: 100%;
+        height: 2.4rem;
+        padding: 0.4rem 0.8rem;
+        color:#495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #063105;
+        border-radius: 0.9rem;
+        transition: border-color 0.20s ease-out, box-shadow 0.20s ease-out;
+
+      }
+
+      .form-control:focus {
+        border-color: #f4f1bb;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem;
+      }
+
+      .input-radio {
+        display: inline-block;
+        margin-right: 0.7rem;
+        min-width: 1.25rem;
+        min-height: 1.25rem;
+        vertical-align: bottom;
+        
+      }
+
+      .input-checkbox {
+        display: inline-block; 
+        margin-right: 0.7rem;
+        min-width: 1.25rem;
+        min-height: 1.25rem;
+        vertical-align: middle;
+        }
+
+      .input-textarea {
+        min-height: 120px;
+        width: 100%;
+        padding: 0.75rem;
+        resize: vertical;
+        border-radius: 0.9rem;
+      }
+
+      .submit-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        padding: 5px;
+        font-family: Bellota;
+        font-weight: bolder;
+        font-size: 18px;
+        background: #B7E906;
+        color: #031C0A;
+        border-radius: 9px;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+
+      .submit-button:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 20px 60px 0 rgba(0, 0, 0, 0.19);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class= "container">
+      <header class="header">
+          <h1 id="title" class="head-text">Funny Survey</h1>
+          <p id="description" class="description head-text">Do not take this form seriously, but it is highly recommended that you answer the questions anyway.&#128540</p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required/>
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+            >
+        </div>
+        <div class="form-group">
+          <p>If age is only a state of mind, which category best describes your state of mind right now?</p>
+          <select id="dropdown" name="age-drop" class="form-control" required>
+            <option disabled selected value>Select your state of mind</option>
+            <option value="child">Cheeky Child 👶</option>
+            <option value="teenager">Tormented Teenager👦</option>
+            <option value="mid-age">Mad Mid-Lifer👱‍♀️</option>
+            <option value="old">Groovy Grandparent👵</option>
+            <option value="other">Other👽</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">I am an odd number. Take away one letter and I become even. What number am I?</label>
+          <br>
+          <input
+            type="number"
+            name="odd"
+            id="number"
+            min="6"
+            max="8"
+            class="form-control"
+            placeholder="?"/>
+        </div>
+        <div class="form-group">
+          <p>Are you a dog person, or a cat person?</p>
+          <label>
+            <input
+              name="dog-cat"
+              value="dog"
+              type="radio"
+              class="input-radio"
+              checked
+            />Dog 🐶
+          </label>
+          <label>
+            <input
+              name="dog-cat"
+              value="cat"
+              type="radio"
+              class="input-radio"
+            />Cat 🐱
+          </label>
+          <label>
+            <input
+              name="dog-cat"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure 😕
+          </label>
+        </div>
+        <div class="form-group-checkbox">
+          <p>Which superpower would you like to have? 
+          <span class="clue">(Check all that apply)</span></p>
+          <label>
+            <input 
+              name="superpower"
+              type="checkbox"
+              value="mind-read"
+              class="input-checkbox"
+            >Mind Reading
+          </label>
+          <label>
+            <input 
+              name="superpower"
+              type="checkbox"
+              value="invisibility"
+              class="input-checkbox"
+            >Invisibility
+          </label>
+          <label>
+            <input 
+              name="superpower"
+              type="checkbox"
+              value="teleportation"
+              class="input-checkbox"
+            >Teleportation
+          </label>
+          <label>
+            <input 
+              name="superpower"
+              type="checkbox"
+              value="Flying"
+              class="input-checkbox"
+            >Flying
+          </label>
+          <label>
+            <input 
+              name="superpower"
+              type="checkbox"
+              value="have-superpower"
+              class="input-checkbox"
+            >I have already a superpower
+          </label>
+        </div>
+        <div class="form-group">
+          <p>What’s the best tech invention of the 21st Century?</p>
+          <textarea 
+          id="invention" 
+          class="input-textarea" 
+          name="inventions" 
+          placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button" style="vertical-align:middle">
+            Submit 👍
+          </button>
+        </div>    
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    <style>
+            
+body, html {
+      margin: 0;
+      background-color: azure;
+      padding-top: 10%;
+     }
+
+* {
+  box-sizing: border-box;
+}
+
+
+#title {
+  text-align: center;
+  font-size: 45px;
+  font-family: monospace;
+  color: white;
+  text-shadow: 2px 2px 6px #000;
+}
+
+#description {
+    text-align: center;
+    font-family: monospace;
+    color: white;
+    text-shadow: 2px 2px 6px #000;
+}
+.mainbox {
+    display: flex;
+    background-color: brown;
+    margin: auto;
+    width: 70%;
+    padding-top: 2%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;   
+}
+
+.name_space, .email_space, .number_space {
+    display: flex;
+    flex-flow: row;
+    border: 3px solid black;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+        
+}
+
+.drop_space, .radio_space, .check_space {
+    display: flex;
+    flex-flow: column;
+    border: 3px solid black;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.dropsome_space {
+    display: flex;
+    flex-flow: column;
+    border: 3px solid black;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#name-label, #email-label, #number-label {
+    flex-grow: 1;
+    font-size: 27px;
+    font-family: monospace;
+    color: white; 
+    width: 50%;
+    text-align: right;
+    margin: auto;
+ }
+ #dropdown-label, #radio-label, #endofthe-label{
+    display: block;
+    font-size: 20px;
+    font-family: monospace;
+    color: white; 
+    width: 100%;
+    text-align: center;
+    margin: auto;
+ }
+ 
+#name-label:hover, #email-label:hover, #number-label:hover {
+    animation-name: fontcolor;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+#name, #email, #number {
+    width: 100%;
+    height: 3em;
+    margin: auto;
+    flex-grow: 8;
+}
+#dropdown {
+    display: block;
+    width: 100%;
+    height: 3em;
+    margin: auto;
+    
+}
+#radio1 {
+    
+}
+.radio_text {
+    
+    color: white;
+    font-size: 18px;
+    font-family: monospace;
+}
+#dropdown-label:hover {
+    animation-name: fontcolor;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fontcolor {
+    from {color: white; }
+    to {color: blue;}
+}
+
+</style>
+</head>  
+        <body>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+            <div class="mainbox"> 
+                <h1 id="title">Simple Survey</h1>
+                <p id="description">If you want to support me, join this survey </p>
+                          
+            <form id="survey-form">
+                <div class="name_space">
+                    <label id="name-label" for="name">Name : </label>
+                    <input id="name" type="text" placeholder="Please enter your name" required>
+                </div>
+                <div class="email_space">
+                    <label id="email-label" for="email">Email :</label>
+                    <input id="email" type="email" placeholder="Please enter your email address" required>
+                </div>
+                <div class="number_space">
+                    <label id="number-label" for="number">Age :</label>
+                    <input id="number" type="number" min="1" max="85" placeholder="Age" required>
+                </div>
+                <div class="drop_space">
+                    <label id="dropdown-label" for="abomination">What type of abomination you are? </label>
+                    <select id="dropdown" name="abomination" required>
+                        <option disabled selected value>Abomination Meter</option>
+                        <option value="level_1">I am just a bad person</option>
+                        <option value="level_2">I am against the law</option>
+                        <option value="level_3">Breaking rules like bone</option>
+                        <option value="level_4">Metalhead</option>
+                    </select>
+                </div>
+                <div class="radio_space">
+                    <label id="radio-label" for="dumbmeter">Are you a fucking dumb? </label>
+                    <div class="radio_option1">
+                        <input type="radio" id="radio1" name="dumbmeter" value="ofcourse">
+                            <label for="radio1" class="radio_text">Of Fuckin' Course</label>
+                    </div>
+                    <div class="radio_option2">
+                    <input type="radio" id="radio2" name="dumbmeter" value="whadoyathink">
+                            <label for="radio2" class="radio_text">What do you think?</label>
+                    </div>
+                    <div class="radio_option3">
+                    <input type="radio" id="radio3" name="dumbmeter" value="hellyea">
+                            <label for="radio3" class="radio_text">Hell yea brothter</label>
+                    </div>
+                    </div>
+                        
+                <div class="check_space">
+                    <label id="endofthe-label" for="endofall">Do you wanna see end of the f'in world? </label>
+                    <input type="checkbox" id="option1" name="endofall" value="whythefucknot">
+                           <label for="option1">Why the fuck not dude?</label>
+                    <input type="checkbox" id="option2" name="endofall" value="dafuccc">
+                           <label for="option2">What the fuck is wrong with you?</label>
+                    <input type="checkbox" id="option3" name="endofall" value="thisis"> 
+                           <label for="option3">This is seriously fucked up man.</label> 
+                </div>
+                <div class="dropsome_space">
+                    <label id="dropmesome" for="somelove"> Drop me some love eh? Down below :</label>
+                    <textarea id="somelove" placeholder="Drop me some love?"></textarea>
+                </div>
+                <div class="workingbutton">
+                    <button type="submit" id="submit" value="submit" class="submitbutton">Admit and send</button>
+                </div>
+            </div>
+            </form>
+            
+         
+        
+        </body>
+      
+</html>
