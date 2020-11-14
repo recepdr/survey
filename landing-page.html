@@ -5,16 +5,36 @@
         <title> Landing Page </title>
         <style>
             #header-img {
-                width: 100px;
+                width: 150px;
             }
 
         </style>
         <body>
             <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
             <header id="header">
-                <img id="header-img" src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/form-1-3_orig.png" alt="logo">
-
+                <img id="header-img" src="https://github.com/recepdr/survey/blob/main/logo.png?raw=true" alt="logo">
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a class="nav-link" href="#lessons">Derslerimiz</a></li>
+                        <li><a class="nav-link" href="#web2">Kullanılan araçlar</a></li>
+                        <li><a class="nav-link" href="#sample-video">Örnek Video</a></li>
+                        <li><a class="nav-link" href="#contact">Bize ulaşın</a></li>
+                    </ul>       
+                </nav>
+                
             </header>
+            <section id="lessons"></section>
+            <section id="web2"></section>
+            <section id="sample-video">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/TSXVeIrUFR4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </section>
+            <section id="contact">
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input id="email" type="email" name="email" placeholder="Eposta adresi">
+                    <input id="submit" type="submit" required>
+                </form>
+            </section>
         </body>
     </head>
 </html>
