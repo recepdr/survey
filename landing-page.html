@@ -4,51 +4,67 @@
         <meta charset="utf-8">
         <title> Landing Page </title>
         <style>
+            * {
+                box-sizing: border-box;
+            }
+           
             header{
                 background-color: yellow;
                 display: flex;
-                flex-flow: row;
                 width: 100%;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                
+
             }
-            .nav-link {
-                background-color: violet;
+            #nav-bar {
+                background-color: rgb(238, 202, 238);
+                width: 75%;
+
+                
+            }
+            ul {
+                list-style: none;
                 display: flex;
-                flex-flow: row;
-                justify-content: center;
+                justify-content: space-around;
+                
             }
             #header-img {
                 width: 150px;
                 height: 100px;
             }
-
-
-
-            
-
+            .form {
+                margin-top: 110px;
+                background-color: red;
+                padding: 2em;
+                display: flex;
+                justify-content: center;
+            }
         </style>
         <body>
             <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
             <header id="header">
-                <img id="header-img" src="https://github.com/recepdr/survey/blob/main/logo.png?raw=true" alt="logo">
+                
+                <img id="header-img" src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/logo2_orig.png" alt="logo">
                 <nav id="nav-bar">
                     <ul>
-                        <li><a class="nav-link" href="#lessons">Derslerimiz</a></li>
-                        <li><a class="nav-link" href="#web2">Kullanılan araçlar</a></li>
-                        <li><a class="nav-link" href="#sample-video">Örnek Video</a></li>
-                        <li><a class="nav-link" href="#contact">Bize ulaşın</a></li>
+                        <li><a class="nav-link" href="#features">Features</a></li>
+                        <li><a class="nav-link" href="#products">Products</a></li>
+                        <li><a class="nav-link" href="#about-us">About Us</a></li>
                     </ul>       
                 </nav>
                 
             </header>
-            <section id="lessons"></section>
-            <section id="web2"></section>
-            <section id="sample-video">
-                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/TSXVeIrUFR4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
-            <section id="contact">
+            <div class="form">
                 <form id="form" action="https://www.freecodecamp.com/email-submit">
                     <input id="email" type="email" name="email" placeholder="Eposta adresi">
                     <input id="submit" type="submit" required>
+            </div>
+            <section id="features"></section>
+            <section id="products"></section>
+            <section id="about-us">
+                
                 </form>
             </section>
         </body>
