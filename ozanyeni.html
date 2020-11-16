@@ -16,7 +16,7 @@
             width: 200px;
         }
 
-        .header {
+        #header {
             
             background: rgb(128,19,54);
             background: linear-gradient(180deg, rgba(128,19,54,1) 0%, rgba(128,19,54,0.7511379551820728) 63%, rgba(252,176,69,0) 100%);
@@ -50,7 +50,7 @@
             text-decoration: none;
         }
         li:hover {
-            background: rgb(128,19,54,);
+            background: rgb(128,19,54);
             font-size: 21px;
         }
         li{
@@ -66,7 +66,7 @@
         .first_box {
             background-image: linear-gradient(180deg,rgba(128,19,54,0.3), rgba(128,19,54,1)), url(http://wallpaper-house.com/data/out/10/wallpaper2you_421591.jpg);
             border: 5px solid  #801336;
-            margin-top: 210px;
+            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
             min-height: 1000px;
@@ -79,6 +79,70 @@
             justify-content: center;
             align-items: center;          
         }
+        .second_box{
+            margin-left: auto;
+            margin-right: auto;
+            height: 1000px;
+            margin-top: 200px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            flex-flow: column;
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 1px;
+            
+        }
+        .third_box{
+            background: rgb(128,19,54);
+            background: linear-gradient(180deg, rgba(128,19,54,0) 0%, rgba(128,19,54,1) 100%);
+            margin-left: auto;
+            margin-right: auto;
+            height: 900px;
+            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            color: rgb(243, 239, 239);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 30px;
+        }
+        .fourth_box {
+            background: rgb(128,19,54);
+            background: linear-gradient(0deg, rgba(128,19,54,0) 0%, rgba(128,19,54,1) 100%);
+            margin-left: auto;
+            margin-right: auto;
+            height: 900px;
+            margin-top: 10px;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            color: rgb(243, 239, 239);
+            font-family: 'Bebas Neue', cursive;
+            font-size: 30px;
+        }
+
+        .plan_boxes{
+            border: 2px solid black;
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .second_text{
+            color: rgb(243, 239, 239);
+            padding-left: 20px;
+
+        }
+        .what_box {
+            background: rgb(128,19,54);
+            background: linear-gradient(251deg, rgba(128,19,54,0) 0%, rgba(128,19,54,1) 100%);
+        }
+
         .bigtext {
             font-size: 72px;
             position: absolute;
@@ -136,7 +200,6 @@
             font-family: 'Bebas Neue', cursive;
         }
         .emailbox {
-            /*background-color:  rgba(128,19,54,0.2);*/
             position: absolute;
             top: 35%;
             left: 10%;
@@ -176,22 +239,116 @@
         #submit:hover{
             background-color: #252525;          
         }
-
+        .what2_box {
+         background-image: linear-gradient(90deg, rgba(128,19,54,0) 0%, rgba(128,19,54,1) 100%), url(https://upload.wikimedia.org/wikipedia/commons/8/8c/AsphyxBand.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 100%;
+         height: 250px;
+         display: flex;
+         justify-content: left;
+         padding-left: 30px;
+         align-items: center;
+         color: rgb(243, 239, 239);
+         font-size: 35px;
+         font-family: 'Bebas Neue', cursive;
+        }
+        .what3_box {
+         background-image: linear-gradient(251deg, rgba(128,19,54,0) 0%, rgba(128,19,54,1) 100%), url(https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/whatsapp-mage-2020-11-16-at-22-34-45_orig.jpeg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 100%;
+         height: 250px;
+         display: flex;
+         justify-content: left;
+         padding-left: 30px;
+         align-items: center;
+         color: rgb(243, 239, 239);
+         font-size: 35px;
+         font-family: 'Bebas Neue', cursive;
+        } 
+        .box1{
+            border: 2px solid black;
+            text-align: center;
+            width: 33%;
+        }
+        .box2{
+            border: 2px solid black;
+            text-align: center;
+            width: 33%;
+        }
+        .box3{
+            border: 2px solid black;
+            text-align: center;
+            width: 33%;
+        }
+        .option_ul {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 20px;
+            display: flex;
+            flex-flow: column;
+        }
     </style>
 </head>
 <body>
-<div class="header">
- <img src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/black_orig.png">
-    <nav>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<header id="header">
+ <img id="header-img" src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/black_orig.png">
+    <nav id="nav-bar">
         <ul>
-            <li><a href="#madness">JOIN OUR MADNESS</a></li>
-            <li><a href="#benefits">OVERDRIVE BENEFITS</a></li>
-            <li><a href="#metal">WHAT THE HECK IS METAL?</a></li>
-            <li><a href="#social">SOCIAL MEDIA</a></li>
+            <li><a class="nav-link" href="#what">WHAT IS OVERDRIVE?</a></li>
+            <li><a class="nav-link" href="#metal">WHAT THE HECK IS METAL?</a></li>
+            <li><a class="nav-link" href="#plan">SELECT A PLAN</a></li>
+            <li><a class="nav-link" href="#madness">JOIN OUR MADNESS</a></li>
         </ul>
     </nav>
+</header>
+<div class="second_box" id="what">
+    <div class="what_box">
+    <h1 class="second_text">OverdrIve Is a Metal FrIendly Cloud Storage ServIce</h1>
+    <h2 class="second_text">You can upload all your recordIngs</h2>
+    <h2 class="second_text">and share them wIth your bandmates Instantly!</h2>
+    <h2 class="second_text">In thIs process, you can contInue to HEADBANG </h2>
+    <h2 class="second_text">by lIstening to any metal song you want on the sIte!</h2>
+    </div>
+    <div class="what2_box">
+        <h1>Keep HeadbangIng!</h1>
+    </div>
+    <div class="what3_box">
+    <h1>WhIle UpdatIng!!!</h1>
+    </div>
 </div>
 
+<div class="third_box" id="metal">
+<h1 class=third_text>WELL, METAL MUSIC IS THE BEST!!!</h1>
+<h2 class="third_h2_text">TRY IT AT YOUR OWN RISK!<h2>
+<h3 class="third_warning">WARNING: HIGHLY ADDICTIVE!</h3>
+<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/n5ywClPvyw4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+<div class="fourth_box" id="plan">
+    <h1>WE HAVE OPTIONS FOR EVERY METALHEAD!</h1>
+    <div class="plan_boxes">
+        <div class="box1">
+            <h4>FREE</h4>
+                <ul class="option_ul">
+                    <li class="li">Fast Servers!</li>
+                    <li>50 GB Storage</li>
+                    <li>Desktop App</li>
+                    <li>Mobile App</li>
+                    <li>Customer Support</li>
+                </ul>
+        </div>
+        <div class="box2">
+            <h4>STARTER</h4>
+        </div>
+        <div class="box3">
+            <h4>METALHEAD!</h4>
+        </div>
+    </div>
+</div>
 
     <div class="first_box" id="madness">
             <form id="form" action="https://www.freecodecamp.com/email-submit">
@@ -204,8 +361,6 @@
             <input id="submit" type="submit" required></div></form>
         </div>
 
-    <div class="second_box" id="benefits"></div>
-    <div class="third_box" id="metal"></div>
-    <div class="fourth_box" id="social"></div>
+
 </body>
 </html>
