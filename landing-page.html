@@ -4,262 +4,284 @@
         <meta charset="utf-8">
         <title> Landing Page </title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Manjari&family=Zilla+Slab:wght@500;700&display=swap');
-            :root {
-                --background: #fdd576;
-                --navcolor: #a5590e;
-                --textcolor: #2f0000;
-                --sec-color: #762b0a;
-                --tri-color: #e39a31;
-                --bold-font: 'Zilla Slab', serif;
-                --normal-font: 'Manjari', sans-serif;
-            }
-            body {
-                background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
-                font-family: var(--normal-font);
-            }
+           @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2? family=Manjari&family=Zilla+Slab:wght@500;700&display=swap");
+:root {
+  --background: #fdd576;
+  --navcolor: #a5590e;
+  --textcolor: #2f0000;
+  --sec-color: #762b0a;
+  --tri-color: #e39a31;
+  --bold-font: "Zilla Slab", serif;
+  --normal-font: "Manjari", sans-serif;
+}
+body {
+  background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  font-family: var(--normal-font);
+}
 
-            * {
-                box-sizing: border-box;
-            }
-           
-            header{
-                width: 100%;
-                align-items: center;
-                display: block;
-              
-            }
-            nav {
-                position: fixed;
-                display: flex;
-                background-image: linear-gradient(90deg, rgba(126, 18, 32, 0.925) 0%, rgba(248, 155, 42, 0.74) 100%);
-                width: 100%;
-                top: 0;
-                overflow: hidden;
-                z-index: 1;
-                border-radius: 15px;
-                box-shadow: 0em 1.5em 2em rgba(87, 4, 4, 0.842);
-            }
-            ul {
-                
-                list-style: none;
-                display: flex;
-                justify-content: space-around;
-                padding: 1.5em;
-                width: 100%;
-                
-            }
-            .nav-link  {
-                color: var(--background);
-                font-size: 2em;
-                font-family: var(--bold-font);
-            }
-            #header-img {
-                width: 130px;
-                height: 90px;
-                align-self: flex-start;
-            }
+* {
+  box-sizing: border-box;
+}
 
-            .form-container {
-                background-image: url(https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/mg-20201115-204443_orig.jpg);
-                margin-top: 7.5em;
-                min-height: 800px;
-                position: relative;
-                width: 100%;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                justify-content: center;
-                border: 10px solid rgba(248, 8, 0, 0.4);
-                border-style: inset;
-                border-radius: 10px;
-                
-                
-            }
-            
-            #form {
-                /*background-color: rgb(0,0,0);  /* Fallback color 
-                background-color: rgba(61, 248, 14, 0.4); 
-                color: white;
-                font-weight: bold;
-                border: 3px solid #f1f1f1;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 2;
-                width: 80%;
-                padding: 20px;
-                text-align: center;*/
-                
-                background-color:rgba(0, 0, 0, 0.4);
-                padding: 10px 60px 50px;
-                margin-top: 100px;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                position: absolute;
-                border-radius: 22px;
-                color: aliceblue;   
-                border: 5px solid aliceblue;             
-                font-size: 1.5em;
-                box-shadow: 5px 10px 6px rgba(0, 0, 0, 0.4);
-                text-align: center;
-            }
-            #email {
-                margin-bottom: 2em;
-                font-size: 1em;
-                font-family: var(--bold-font);
-            }
-            #submit {
-                font-size: 1em;
-                border-radius: 9em;
-                font-family: var(--bold-font);
-            }
-            
-            .comp-name {
-                background-color: rgba(139, 69, 19, 0.466);
-                /*z-index: 0;*/
-                padding: 10px 10px 10px 15px;
-                width: fit-content;
-                height: fit-content;
-                position: absolute;
-                bottom: 5%;
-                left: 1%;
-                right: 1%;
-                border: 5px solid rgba(0, 0, 0, 0.637);
-                border-radius: 15px;
-                box-shadow: 5px 10px 8px rgb(58, 38, 0);
-            }
-            #features {
-                
-                display: flex;
-                justify-content: space-between;
-                height: 500px;
-                padding: 50px
-            }
-            .featbox1, .featbox2, .featbox3 {
-                background-image: linear-gradient(0deg, #ff930fff, #fff95bff);
-                display: flex;
-                flex-flow: column;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                margin-right: 3em;
-                padding: 2em;
-                font-size: 1.3em;
-                border-radius: 2em;
-                border: 1em solid rgba(126, 110, 18, 0.521);
-                box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
-            }
-            i {
-                font-size: 3em;
-            }
-            #products {
-                height: 800px;
-                display: flex;
-                justify-content: center;
-                background-image: linear-gradient(90deg, rgba(126, 18, 32, 0.637) 0%, rgba(248, 155, 42, 0.74) 100%);
-                border-radius: 3em;
-                border: 1em solid rgba(126, 110, 18, 0.521);
+header {
+  width: 100%;
+  align-items: center;
+  display: block;
+}
+nav {
+  position: fixed;
+  display: flex;
+  background-image: linear-gradient(
+    90deg,
+    rgba(126, 18, 32, 0.925) 0%,
+    rgba(248, 155, 42, 0.74) 100%
+  );
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 15px;
+  box-shadow: 0em 1.5em 2em rgba(87, 4, 4, 0.842);
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5em;
+  width: 100%;
+}
+.nav-link {
+  color: var(--background);
+  font-size: 2em;
+  font-family: var(--bold-font);
+}
+#header-img {
+  width: 130px;
+  height: 90px;
+  align-self: flex-start;
+}
 
-            }
-            .video {
-                padding: 2em;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+.form-container {
+  background-image: url(https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/mg-20201115-204443_orig.jpg);
+  margin-top: 7.5em;
+  min-height: 800px;
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  border: 10px solid rgba(248, 8, 0, 0.4);
+  border-style: inset;
+  border-radius: 10px;
+}
 
-            iframe {
-                box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
-                border-radius: 3em;
-            }
-            .about-us-container {
-                background-image: linear-gradient(270deg, rgba(73,180,58,0.24693627450980393) 0%, rgba(137, 253, 29, 0.331) 50%, rgba(252,176,69,0.5550595238095238) 100%), url(https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/20200308-125302_orig.jpg);
-                height: 800px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                justify-content: flex-end;
-                border-radius: 3em;
-                border: 1em solid rgba(126, 110, 18, 0.521);
-                box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
-            }
-            .about-us-text{
-                background-color: rgba(139, 69, 19, 0.801);
-                display: flex;
-                height: fit-content;
-                padding: 1.5em;
-                border-radius: 3em;
-                border: 0.2em solid rgba(247, 211, 10, 0.521);
-            }
+#form {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 60px 50px;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: absolute;
+  border-radius: 22px;
+  color: aliceblue;
+  border: 5px solid aliceblue;
+  font-size: 1.5em;
+  box-shadow: 5px 10px 6px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+#email {
+  margin-bottom: 2em;
+  font-size: 1em;
+  font-family: var(--bold-font);
+}
+#submit {
+  font-size: 1em;
+  border-radius: 9em;
+  font-family: var(--bold-font);
+}
+
+.comp-name {
+  background-color: rgba(139, 69, 19, 0.466);
+  /*z-index: 0;*/
+  padding: 10px 10px 10px 15px;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 5%;
+  left: 1%;
+  right: 1%;
+  border: 5px solid rgba(0, 0, 0, 0.637);
+  border-radius: 15px;
+  box-shadow: 5px 10px 8px rgb(58, 38, 0);
+}
+#features {
+  display: flex;
+  justify-content: space-between;
+  height: 500px;
+  padding: 50px;
+}
+.featbox1,
+.featbox2,
+.featbox3 {
+  background-image: linear-gradient(0deg, #ff930fff, #fff95bff);
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3em;
+  padding: 2em;
+  font-size: 1.3em;
+  border-radius: 2em;
+  border: 1em solid rgba(126, 110, 18, 0.521);
+  box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
+}
+i {
+  font-size: 3em;
+}
+#products {
+  height: 800px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-image: linear-gradient(
+    90deg,
+    rgba(126, 18, 32, 0.637) 0%,
+    rgba(248, 155, 42, 0.74) 100%
+  );
+  border-radius: 3em;
+  border: 1em solid rgba(126, 110, 18, 0.521);
+}
+.video {
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+iframe {
+  box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
+  border-radius: 3em;
+}
+.about-us-container {
+  background-image: linear-gradient(
+      270deg,
+      rgba(73, 180, 58, 0.24693627450980393) 0%,
+      rgba(137, 253, 29, 0.331) 50%,
+      rgba(252, 176, 69, 0.5550595238095238) 100%
+    ),
+    url(https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/20200308-125302_orig.jpg);
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 3em;
+  border: 1em solid rgba(126, 110, 18, 0.521);
+  box-shadow: 1em 1.5em 1em rgb(58, 38, 0);
+}
+.about-us-text {
+  background-color: rgba(139, 69, 19, 0.801);
+  display: flex;
+  height: fit-content;
+  padding: 1.5em;
+  border-radius: 3em;
+  border: 0.2em solid rgba(247, 211, 10, 0.521);
+}
+
+@media screen and (max-width: 700px) {
+  #features {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+  }
+  .featbox1,
+  .featbox2,
+  .featbox3 {
+    max-height: fit-content;
+    margin-right: 0em;
+    padding: 1em;
+    font-size: 1em;
+  }
+  i {
+    font-size: 2em;
+  }
+  #products {
+    margin-top: 300px;
+    display: flex;
+    flex-flow: column;
+  }
+}
+
 
         </style>
         <body>
             <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
             <script src="https://kit.fontawesome.com/ad98e891a7.js" crossorigin="anonymous"></script>
             <header id="header">
-               
-            <nav id="nav-bar">
-                    <img id="header-img" src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/logo2_orig.png" alt="logo">
-                    <ul>
-                        <li><a class="nav-link" href="#form-container">Subscribe</a></li>
-                        <li><a class="nav-link" href="#features">Features</a></li>
-                        <li><a class="nav-link" href="#products">Products</a></li>
-                        <li><a class="nav-link" href="#about-us">About Us</a></li>
-                    </ul>       
-            </nav>
-            </header>    
-            
+           
+              <nav id="nav-bar">
+                <img id="header-img" src="https://sourceofmine.weebly.com/uploads/1/1/9/8/119868229/logo2_orig.png" alt="logo">
+                <ul>
+                  <li><a class="nav-link" href="#form-container">Subscribe</a></li>
+                  <li><a class="nav-link" href="#features">Features</a></li>
+                  <li><a class="nav-link" href="#products">Products</a></li>
+                  <li><a class="nav-link" href="#about-us">About Us</a></li>
+                </ul>
+              </nav>
+            </header>
+           
             <div class="form-container" id="form-container">
-                <form id="form" action="https://www.freecodecamp.com/email-submit">
-                    <h2>Subscribe</h2>
-                    <input id="email" type="email" name="email" placeholder="Enter your email">
-                    <input id="submit" type="submit" required>
-                </form>
-                <div class="comp-name">
-                    <h1>Sparrow Design</h1>
-                    <h3>We design what you dream of.</h3>
-                </div>    
+              <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <h2>Subscribe</h2>
+                <input id="email" type="email" name="email" placeholder="Enter your email">
+                <input id="submit" type="submit" required>
+              </form>
+              <div class="comp-name">
+                <h1>Sparrow Design</h1>
+                <h3>We design what you dream of.</h3>
+              </div>
             </div>
             <section id="features">
-                <div class="featbox1">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Feel the nature</h4>
-                    <p>Our products were carved from olive and walnut trees</p>
-                </div>
-                <div class="featbox2">
-                    <i class="fas fa-crown"></i>
-                    <h4>Feel special</h4>
-                    <p>All of our products have unique designs</p>
-                </div>
-                <div class="featbox3">
-                    <i class="fab fa-redhat"></i>
-                    <h4>Synthesize tradition with modernity</h4>
-                    <p>Our products are based on traditions but they are redesigned with modernity</p>
-                </div>
-                
+              <div class="featbox1">
+                <i class="fas fa-leaf"></i>
+                <h4>Feel the nature</h4>
+                <p>Our products were carved from olive and walnut trees</p>
+              </div>
+              <div class="featbox2">
+                <i class="fas fa-crown"></i>
+                <h4>Feel special</h4>
+                <p>All of our products have unique designs</p>
+              </div>
+              <div class="featbox3">
+                <i class="fab fa-redhat"></i>
+                <h4>Synthesize tradition with modernity</h4>
+                <p>Our products are based on traditions but they are redesigned with modernity</p>
+              </div>
+           
             </section>
             <section id="products">
-                
-                <div class="video">
-                    <h2>See our designs...</h2>
-                    <i class="fas fa-arrow-circle-right"></i>
-                    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Dt4GUBuRHj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+           
+              <div class="video">
+                <h2>See our designs...</h2>
+                <i class="fas fa-arrow-circle-right"></i>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Dt4GUBuRHj8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </section>
             <section id="about-us">
-                    <div class="about-us-container">
-                        
-                        <h2 class="about-us-text">We &#x1F5A4 creating wooden designs.</h2>
-                    </div>
-                </div>
-                
+              <div class="about-us-container">
+           
+                <h2 class="about-us-text">We &#x1F5A4 creating wooden designs.</h2>
+              </div>
+           
+           
             </section>
+           
         </body>
     </head>
 </html>

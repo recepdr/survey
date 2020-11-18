@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            #navbar{
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px; 
+            }
+            
+            #main-doc{
+            margin-left: 200px; 
+            font-size: 28px; 
+            padding: 0px 10px;
+            }
+           
+            .note {
+                background-color: rgb(240, 240, 0, 0.5);
+                border: 3px dotted black;
+                margin-top: 40px;
+            } 
+
+            .codebox{
+                background-color: black;
+                color: #f9f9f9;
+                font-family: monospace;
+                font-size: 15px;
+                white-space: pre-wrap;
+                padding-left: 20px;
+                text-align: left;
+            }
+
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <nav id="navbar">
+            <header>Bootstrap 4 Get Started</header>
+            <ul>
+                <li><a class="nav-link" href="#What_is_Bootstrap?">What is Bootstrap?</a></li>
+                <li><a class="nav-link" href="#Bootstrap_3_vs._4">Bootstrap 3 vs. 4</a></li>
+                <li><a class="nav-link" href="#Why_Use_Bootstrap?">Why Use Bootstrap?</a></li>
+                <li><a class="nav-link" href="#Where_to_Get_Bootstrap_4?">Where to Get Bootstrap 4?</a></li>
+                <li><a class="nav-link" href="#Bootstrap_4_CDN">Bootstrap 4 CDN</a></li>
+                <li><a class="nav-link" href="#Create_First_Web_Page">Create First Web Page</a></li>
+                <li><a class="nav-link" href="#Two_Basic_Bootstrap_4_Pages">Two Basic Bootstrap 4 Pages</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="What_is_Bootstrap?"><h1>What is Bootstrap?</h1>
+                <li>Bootstrap is a free front-end framework for faster and easier web development</li>
+                <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables,
+                 navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
+                <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+            <div class="note">
+                <h4>What is Responsive Web Design?</h4>
+                <p>Responsive web design is about creating web sites which automatically 
+                    adjust themselves to look good on all devices, from small phones to large desktops.</p>
+            </div>
+            <div class="codebox">
+                <h4><u>Bootstrap 4 Example</u></h4>
+                <code class="code"> 
+&lt;div class="jumbotron text-center"&gt;
+    &lt;h1>My First Bootstrap Page&lt;/h1> 
+    &lt;p>Resize this responsive page to see the effect!&lt;/p>
+&lt;/div>
+                  
+&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="col-sm-4">
+            &lt;h3>Column 1&gt;h3>
+            &lt;p>Lorem ipsum dolor..&gt;/p>
+        &lt;/div>
+        &lt;div class="col-sm-4">
+            &lt;h3>Column 2&gt;/h3>
+            &lt;p>Lorem ipsum dolor..&gt;/p>
+        &lt;/div>
+        &lt;div class="col-sm-4">
+            &lt;h3>Column 3&gt;/h3>
+            &lt;p>Lorem ipsum dolor..&gt;/p>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                </code>
+            </div>
+            </section>
+
+            <hr>
+
+            <section class="main-section" id="Bootstrap_3_vs._4">
+                <h1>Bootstrap 3 vs. 4</h1>
+                <p>Bootstrap 4 is the newest version of Bootstrap; with new components, 
+            faster stylesheet and more responsiveness.</p>
+                <p>Bootstrap 4 supports the latest, stable releases of all major 
+            browsers and platforms. However, Internet Explorer 9 and down is not supported.</p>
+            <div class="note">
+                <p><strong>If you require IE8-9 support, use <u>Bootstrap 3</u>.</strong> It is the most 
+            stable version of Bootstrap, and it is still supported by the team for critical 
+            bugfixes and documentation changes. However, no new features will be added to it.</p>
+                <p>Droppped icon support: Bootstrap 4 does not support BS3 Glyphicons. 
+                    Use <a href="https://www.w3schools.com/icons/default.asp">Font-Awesome or other icon libraries instead.</a></p>
+            </div>
+            </section>
+            <section class="main-section" id="Why_Use_Bootstrap?"><header>Why Use Bootstrap?</header>
+            </section>
+            <section class="main-section" id="Where_to_Get_Bootstrap_4?"><header>Where to Get Bootstrap 4?</header>
+            </section>
+            <section class="main-section" id="Bootstrap_4_CDN"><header>Bootstrap 4 CDN</header></section>
+            <section class="main-section" id="Create_First_Web_Page"><header>Create First Web Page</header></section>
+            <section class="main-section" id="Two_Basic_Bootstrap_4_Pages"><header>Two Basic Bootstrap 4 Pages</header>
+        </main>
+    </body>
+    
+</html>
