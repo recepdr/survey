@@ -4,40 +4,266 @@
     <head>
         <title>SASS Inroduction</title>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Josefin+Sans&family=Source+Code+Pro&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Source+Code+Pro&display=swap');
+            :root{
+            --primary: #FFE200;
+            --secondary: #222222;
+            --code-color: #39393A;
+            --primary-font: 'Josefin Sans', sans-serif;
+            --code-font: 'Source Code Pro', monospace;
+            }
+            body {
+                color: #ecfff8;
+                background-color: var(--secondary);
+                /*max-width: 100%;*/
+                word-wrap: break-word;
+                font-family: var(--primary-font);
+            }
+            #navbar {
+                background-color: var(--primary);
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                z-index: 1;
+            }
+            .nav-link {
+                text-decoration: none;
+                padding: 5px;
+                font-family: var(--primary-font);
+                font-size: 20px;
+                color: var(--secondary);
+            }
+            .nav-link:hover {
+                border: 2px inset var(--secondary);
+                font-weight: bold;
+                color: var(--secondary); 
+            }
+            #non-header {
+                display: none;
+            }
+            .inline-link{
+                color: var(--primary);
+            }
+            .top-header {
+                text-align: center;
+                background-color: var(--code-color);
+                padding: 4px;
+                margin-bottom: 20px;
+                box-shadow: 10px 5px var(--primary);
+
+            }
+            
+            #main-doc {
+                background-color: var(--secondary);
+               
+                top: 0;
+                margin-left: 200px;
+                padding-left: 1em;
+                padding-right: 3em;
+                
+                overflow: hidden;
+                font-size: 24px;
+            }
+            header {
+                font-size: 25px;
+                text-decoration: underline overline dotted var(--primary);
+                text-align: center;
+            }
+            .code {
+                width: 100%;
+                background-color: var(--code-color);
+                padding: 1em;
+                display: flex;
+                overflow: hidden;
+                word-wrap: break-word;
+                justify-content: center;
+                border: 2px solid var(--primary);
+            }
+
+            code {
+                white-space: pre-wrap;
+                justify-content: center;
+                font-family: var(--code-font);
+                font-size: medium;
+                
+            }
+            .sample-colors {
+                display: block;
+                align-items: center;
+                width: 100%;
+                font-family: var(--code-font);
+            }
+            #color1 {
+                background-color: #e90183;
+                padding: 0.5em;
+            }
+            #color2 {
+                background-color: #872485;
+                padding: 0.5em;
+            }
+            #color3 {
+                background-color: #502784;
+                padding: 0.5em;
+            }
+            @media screen and (max-width: 799px) {
+                .top-header {
+                    font-size: smaller;
+                }
+                .code {
+                    word-break: break-word;
+                }
+            }
 
         </style>
     </head>
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <main id="main-doc">
+            <div class="top-header">
+                <h1>Sass Introduction</h1>
+            </div>
             <section class="main-section" id="what_you_should_already_know?">
                 <header>What You Should Already Know?</header>
+                <p>Before you continue you should have a basic understanding of the following:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+                <p>If you want to study these subjects first, find the tutorials on <a class="inline-link" href="https://www.w3schools.com/default.asp">this page</a> </p>
             </section>
             <section class="main-section"id="what_is_sass?">
                 <header>What is Sass?</header>
+                <ul>
+                    <li><b>Sass</b> stands for <b>S</b>yntactically <b>A</b>wesome <b>S</b>tylesheet.</li>
+                    <li>Sass is an extension to CSS</li>
+                    <li>Sass is a CSS pre-processor</li>
+                    <li>Sass is completely compatible with all versions of CSS</li>
+                    <li>Sass reduces repetition of CSS and therefore saves time</li>
+                    <li>Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006</li>
+                    <li>Sass is free to download and use</li>
+                </ul>
             </section>
+            <hr>
             <section class="main-section" id="why_use_sass?">
                 <header>Why Use Sass?</header>
+                <p>Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.</p>
+                <p>Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.</p>
             </section>
-            <section class="main-section" id="why_sass_is_useful">
+            <hr>
+            <section class="main-section" id="why_sass_is_useful?">
                 <header>Why Sass is Useful?</header>
+                <p>Let's say we have a website with three main colors:</p>
+                <div class="sample-colors">
+                    <div class="color-box" id="color1">
+                        <p>#e90183</p>
+                    </div>
+                    <div class="color-box" id="color2">
+                        <p>#872485</p>
+                    </div>
+                    <div class="color-box" id="color3">
+                        <p>#502784</p>
+                    </div>
+                </div>
+                <p>So, how many times do you need to type those HEX values? A LOT of times. And what about variations of the same colors?</p>
+                <p>Instead of typing the above values a lot of times, you can use Sass and write this:</p>
+                <div class="code">
+                    <code>
+/* define variables for the primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+$primary_3: #878f99;
+
+/* use the variables */
+.main-header {
+background-color: $primary_1;
+}
+.menu-left {
+background-color: $primary_2;
+}
+.menu-right {
+background-color: $primary_3;
+}
+                    </code>
+                </div>
+                <p>So, when using Sass, and the primary color changes, you only need to change it in one place.Let's look another example:</p>
+                <h3>CSS</h3>
+                <div class="code">
+                    <code>
+.bam {
+background: url("#"), 
+-webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #333333), color-stop(100%, #00cc00)), 
+-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #cc0000), color-stop(100%, #ffffff));
+background: url("#"), 
+-webkit-linear-gradient(top left, #333333, #00cc00), -webkit-radial-gradient(#cc0000, #ffffff 100px);
+background: url("#"), 
+-moz-linear-gradient(top left, #333333, #00cc00), -moz-radial-gradient(#cc0000, #ffffff 100px);
+background: url("#"), 
+-o-linear-gradient(top left, #333333, #00cc00), -o-radial-gradient(#cc0000, #ffffff 100px);
+background: url("#"), 
+-ms-linear-gradient(top left, #333333, #00cc00), -ms-radial-gradient(#cc0000, #ffffff 100px);
+background: url("#"), 
+linear-gradient(top left, #333333, #00cc00), radial-gradient(#cc0000, #ffffff 100px);
+}
+                     
+                    </code>
+                </div>
+                <h3>SASS</h3>
+                <div class="code">
+                    <code>
+.bam {
+@include background(
+image-url("#"),
+linear-gradient(top left, #333, #0c0),
+radial-gradient(#c00, #fff 100px)
+);
+}
+                    </code>
+                </div>
+                <p>The winner is SASS :)</p>
             </section>
+            <hr>
             <section class="main-section" id="how_does_sass_work?">
                 <header>How Does Sass Work?</header>
+                <p>A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.</p>
+                <p>This process is called transpiling. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.</p>
+                <div class="note">
+                    <p><b>Tip:</b> Transpiling is a term for taking a source code written in one language and transform/translate it into another language.</p>
+                </div>
             </section>
+            <hr>
             <section class="main-section" id="sass_file_type">
                 <header>Sass File Type</header>
+                <p>Sass files has the ".scss" file extension.</p>
             </section>
+            <hr>
             <section class="main-section" id="sass_comments">
                 <header>Sass Comments</header>
+                <p>Sass supports standard CSS comments <code>/* comment */</code>, and in addition it supports inline comments <code>// comment</code>:</p>
+                <div class="code">
+                    <code>
+/* define primary colors */
+$primary_1: #a2b9bc;
+$primary_2: #b2ad7f;
+/* use the variables */
+.main-header {
+background-color: $primary_1; // here you can put an inline comment
+}
+                    </code>
+                </div>
             </section>
         </main>
         <nav id="navbar">
-            <header>NAVBAR</header>
+            <header id="non-header">Sass Introduction</header>
             <a class="nav-link" href="#what_you_should_already_know?">What You Should Already Know?</a>
             <a class="nav-link" href="#what_is_sass?">What is Sass?</a>
             <a class="nav-link" href="#why_use_sass?">Why Use Sass?</a>
-            <a class="nav-link" href="#why_sass_is_useful">Why Sass is Useful?</a>
+            <a class="nav-link" href="#why_sass_is_useful?">Why Sass is Useful?</a>
             <a class="nav-link" href="#how_does_sass_work?">How Does Sass Work?</a>
             <a class="nav-link" href="#sass_file_type">Sass File Type</a>
             <a class="nav-link" href="#sass_comments">Sass Comments</a>

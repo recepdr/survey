@@ -3,47 +3,169 @@
     <head>
         <style>
             
+            body {
+                background-color: #E8F7EE;
+            }
             #navbar{
             height: 100%;
-            width: 200px;
+            width: 300px;
             position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: #111;
+            background-color: #7C77B9;
             overflow-x: hidden;
             padding-top: 20px; 
-            }
             
+            }
+            .top_header {
+                background-color: #7C77B9;
+                top: 0;
+                margin-left: 300px; 
+                height: 100px;
+                width: auto;
+                color: white;
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fafafa;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .ul_nav {
+                list-style: none;
+                line-height: 2em;
+                font-size: 18px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .nav-link {
+                color: #fafafa;
+                transition-duration: 400ms;
+                text-decoration: none;
+            }
+            .nav-link:hover {
+                text-shadow: 2px 2px 8px #fafafa;
+                color: #fafafa;
+                
+            }
             #main-doc{
-            margin-left: 200px; 
-            font-size: 28px; 
+            margin-left: 300px;
+            font-size: 25px; 
             padding: 0px 10px;
+            font-family: 'Poppins', sans-serif;
             }
            
             .note {
-                background-color: rgb(240, 240, 0, 0.5);
-                border: 3px dotted black;
+                background-color: #A30B37;
                 margin-top: 40px;
+                padding: 20px;
+                color: #fafafa;
+                font-size: 23px;
             } 
 
             .codebox{
-                background-color: black;
+                background-color :#C59175;
                 color: #f9f9f9;
                 font-family: monospace;
-                font-size: 15px;
-                white-space: pre-wrap;
+                font-size: 20px;
+                
                 padding-left: 20px;
                 text-align: left;
+                overflow: visible;
+                margin-top: 20px;
+                /*padding: 20px;*/
             }
-
+            .code {
+                white-space: pre-wrap;
+                color: #f9f9f9;
+                font-family: monospace;
+                overflow: visible;
+                word-wrap: break-word;
+            }
+            .intextcode{
+                color: #A30B37;
+                font-family: monospace;
+            }
+            .cont {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .container {
+                width: 50%;
+                height: 200px;
+                border: 4px solid rgb(179, 179, 179);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container_fluid {
+                width: 50%;
+                height: 200px;
+                border: 4px solid rgb(179, 179, 179);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .g_container {
+                background-color: grey;
+                text-align: center;
+                width: 70%;
+            }
+            .g_container_fluid {
+                background-color: grey;
+                text-align: center;
+                width: 100%;
+            }
+            .none_header{
+                display: none;
+            }
+            .g_head{
+                font-size: 28px;
+                font-weight: bold;
+            }
+            @media screen and (max-width: 799px) {
+                .top_header {
+                    top: 0;
+                    height: 80px;
+                    width: 100%;
+                    font-size: 30px;
+                    margin: 0;
+                }
+                #navbar {
+                    height: fit-content;
+                    width: 100%;
+                    position: relative;
+                    z-index: 0;
+                    left: 0;
+                    background-color: #7C77B9;
+                    overflow-x: hidden;
+                    padding-top: 20px; 
+                    justify-content: center;
+                }
+                .ul_nav {
+                font-size: 15px;
+                text-align: center;
+                }
+                #main-doc{
+                margin: auto;
+                font-size: 20px; 
+                font-family: 'Poppins', sans-serif;
+                justify-content: center;
+            }
+            }
         </style>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
     </head>
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <header class="top_header">Bootstrap 4 Get Started</header>
         <nav id="navbar">
-            <header>Bootstrap 4 Get Started</header>
-            <ul>
+            <header class="none_header">Bootstrap 4 Get Started</header>
+            <ul class="ul_nav">
                 <li><a class="nav-link" href="#What_is_Bootstrap?">What is Bootstrap?</a></li>
                 <li><a class="nav-link" href="#Bootstrap_3_vs._4">Bootstrap 3 vs. 4</a></li>
                 <li><a class="nav-link" href="#Why_Use_Bootstrap?">Why Use Bootstrap?</a></li>
@@ -54,7 +176,7 @@
             </ul>
         </nav>
         <main id="main-doc">
-            <section class="main-section" id="What_is_Bootstrap?"><h1>What is Bootstrap?</h1>
+            <section class="main-section" id="What_is_Bootstrap?"><header class="g_head">What is Bootstrap?</header>
                 <li>Bootstrap is a free front-end framework for faster and easier web development</li>
                 <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables,
                  navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
@@ -65,7 +187,7 @@
                     adjust themselves to look good on all devices, from small phones to large desktops.</p>
             </div>
             <div class="codebox">
-                <h4><u>Bootstrap 4 Example</u></h4>
+                <h4>Bootstrap 4 Example</h4>
                 <code class="code"> 
 &lt;div class="jumbotron text-center"&gt;
     &lt;h1>My First Bootstrap Page&lt;/h1> 
@@ -75,16 +197,16 @@
 &lt;div class="container">
     &lt;div class="row">
         &lt;div class="col-sm-4">
-            &lt;h3>Column 1&gt;h3>
-            &lt;p>Lorem ipsum dolor..&gt;/p>
+            &lt;h3>Column 1&lt;h3>
+            &lt;p>Lorem ipsum dolor..&lt;/p>
         &lt;/div>
         &lt;div class="col-sm-4">
-            &lt;h3>Column 2&gt;/h3>
-            &lt;p>Lorem ipsum dolor..&gt;/p>
+            &lt;h3>Column 2&lt;/h3>
+            &lt;p>Lorem ipsum dolor..&lt;/p>
         &lt;/div>
         &lt;div class="col-sm-4">
-            &lt;h3>Column 3&gt;/h3>
-            &lt;p>Lorem ipsum dolor..&gt;/p>
+            &lt;h3>Column 3&lt;/h3>
+            &lt;p>Lorem ipsum dolor..&lt;/p>
         &lt;/div>
     &lt;/div>
 &lt;/div>
@@ -95,7 +217,7 @@
             <hr>
 
             <section class="main-section" id="Bootstrap_3_vs._4">
-                <h1>Bootstrap 3 vs. 4</h1>
+                <header class="g_head">Bootstrap 3 vs. 4</header>
                 <p>Bootstrap 4 is the newest version of Bootstrap; with new components, 
             faster stylesheet and more responsiveness.</p>
                 <p>Bootstrap 4 supports the latest, stable releases of all major 
@@ -105,16 +227,180 @@
             stable version of Bootstrap, and it is still supported by the team for critical 
             bugfixes and documentation changes. However, no new features will be added to it.</p>
                 <p>Droppped icon support: Bootstrap 4 does not support BS3 Glyphicons. 
-                    Use <a href="https://www.w3schools.com/icons/default.asp">Font-Awesome or other icon libraries instead.</a></p>
+                    Use <a href="https://www.w3schools.com/icons/default.asp">Font-Awesome or other icon 
+                        libraries instead.</a></p>
             </div>
             </section>
-            <section class="main-section" id="Why_Use_Bootstrap?"><header>Why Use Bootstrap?</header>
+            <hr>
+            <section class="main-section" id="Why_Use_Bootstrap?"><header class="g_head">Why Use Bootstrap?</header>
+                <p>Advantages of Bootstrap:</p>
+                <ul>
+                    <li><strong>Easy to use:</strong> Anybody with just basic 
+                        knowledge of HTML and CSS can start using Bootstrap</li>
+                    <li><strong>Responsive features:</strong> Bootstrap's responsive 
+                        CSS adjusts to phones, tablets, and desktops</li>
+                    <li><strong>Mobile-first approach:</strong>In Bootstrap, mobile-first styles 
+                        are part of the core framework</li>
+                    <li><strong>Browser compatibility:</strong>Bootstrap 4 is compatible with all modern browsers 
+                        (Chrome, Firefox, Internet Explorer 10+, Edge, Safari, and Opera)</li>
+                </ul>
             </section>
-            <section class="main-section" id="Where_to_Get_Bootstrap_4?"><header>Where to Get Bootstrap 4?</header>
+            <hr>
+            <section class="main-section" id="Where_to_Get_Bootstrap_4?">
+                <header class="g_head">Where to Get Bootstrap 4?</header>
+                <p>There are two ways to start using Bootstrap 4 on your own web site.</p>
+                <p>You can:</p>
+                <ul>
+                    <li>Include Bootstrap 4 from a CDN</li>
+                    <li>Download Bootstrap 4 from getbootstrap.com</li>
+                </ul>
             </section>
-            <section class="main-section" id="Bootstrap_4_CDN"><header>Bootstrap 4 CDN</header></section>
-            <section class="main-section" id="Create_First_Web_Page"><header>Create First Web Page</header></section>
-            <section class="main-section" id="Two_Basic_Bootstrap_4_Pages"><header>Two Basic Bootstrap 4 Pages</header>
+            <hr>
+            <section class="main-section" id="Bootstrap_4_CDN"><header class="g_head">Bootstrap 4 CDN</header>
+                <p>If you don't want to download and host Bootstrap 4 yourself, 
+                    you can include it from a CDN (Content Delivery Network).</p>
+                <p>MaxCDN provides CDN support for Bootstrap's CSS and JavaScript. 
+                    You must also include jQuery:</p>
+                <div class="codebox">
+                    <h4><u>MaxCDN:</u></h4>
+                    <code class="code">
+&lt;!-- Latest compiled and minified CSS -->
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+&lt;!-- jQuery library -->
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script>
+
+&lt;!-- Popper JS -->
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">&lt;/script>
+
+&lt;!-- Latest compiled JavaScript -->
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">&lt;/script>
+                    </code>
+                </div>
+                <div class="note">
+                    <h4>One advantage of using the Bootstrap 4 CDN:</h4>
+                    <p>Many users already have downloaded Bootstrap 4 from MaxCDN when visiting 
+                        another site. As a result, it will be loaded from cache when they visit 
+                        your site, which leads to faster loading time. Also, most CDN's will make 
+                        sure that once a user requests a file from it, it will be served from the 
+                        server closest to them, which also leads to faster loading time.</p>
+                    <h4>jQuery and Popper?</h4>
+                    <p>Bootstrap 4 use jQuery and Popper.js for JavaScript components (like modals,
+                         tooltips, popovers etc). However, if you just use the CSS part of Bootstrap,
+                          you don't need them.</p>
+                    <input type="button" id="button" value="Show components that require jQuery >>">
+                </div>
+            </section>
+            <hr>
+            <section class="main-section" id="Create_First_Web_Page">
+                <header class="g_head">Create First Web Page</header>
+                <h4>1. Add the HTML5 doctype</h4>
+                <p>Bootstrap 4 uses HTML elements and CSS properties that require the HTML5 doctype.</p>
+                <p>Always include the HTML5 doctype at the beginning of the page, along with 
+                    the lang attribute and the correct character set:</p>
+                    <div class="codebox">
+                <code class="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="utf-8">
+    &lt;/head>
+&lt;/html>
+                </code> 
+            </div>
+            <h4>2. Bootstrap 4 is mobile-first</h4>
+            <p>Bootstrap 4 is designed to be responsive to mobile devices. 
+                Mobile-first styles are part of the core framework.</p>
+            <p>To ensure proper rendering and touch zooming, 
+                add the following &lt;meta> tag inside the &lt;head> element:</p>
+                <div class="codebox">
+                    <code class="code">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+                    </code>
+                </div>
+            <p>The <code class="intextcode">width=device-width</code> part sets the width of the page 
+                to follow the screen-width of the device (which will vary depending on the device).</p>
+            <p>The <code class="intextcode">initial-scale=1</code> part sets the initial zoom level when 
+                the page is first loaded by the browser.</p>
+            <h4>3. Containers</h4>
+            <p>Bootstrap 4 also requires a containing element to wrap site contents.</p>
+            <p>There are two container classes to choose from:</p>
+                <ul>
+                    <li>The <code class="intextcode">.container</code> class provides a responsive 
+                        <strong>fixed width container</strong></li>
+                    <li>The <code class="intextcode">.container-fluid</code> class provides a 
+                        <strong>full width container</strong>, 
+                        spanning the entire width of the viewport</li>
+                </ul>
+        <div class="cont">
+            <div class="container">
+                <div class="g_container"><p>.container</p></div>
+            </div>
+            <div class="container_fluid">
+                <div class="g_container_fluid"><p>.container.fluid</p></div>
+            </div>
+        </div>
+            </section>
+            <hr>
+            <section class="main-section" id="Two_Basic_Bootstrap_4_Pages">
+                <header class="g_head">Two Basic Bootstrap 4 Pages</header>
+            <p>The following example shows the code for a basic Bootstrap 4 page (with a responsive fixed width container):</p>
+                <div class="codebox">
+                    <code class="code">
+                        <h4><u>Container Example</u></h4>
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;title>Bootstrap 4 Example&lt;/title>
+    &lt;meta charset="utf-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script>
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">&lt;/script>
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div class="container">
+    &lt;h1>My First Bootstrap Page&lt;/h1>
+    &lt;p>This is some text.&lt;/p>
+&lt;/div>
+
+&lt;/body>
+&lt;/html> 
+                    </code>
+                </div>
+            <p>The following example shows the code for a basic Bootstrap 4 
+                page (with a full width container):</p>
+            <div class="codebox">
+                <code class="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;title>Bootstrap 4 Example&lt;/title>
+    &lt;meta charset="utf-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script>
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">&lt;/script>
+    &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+
+&lt;div class="container-fluid">
+    &lt;h1>My First Bootstrap Page&lt;/h1>
+    &lt;p>This is some text.&lt;/p>
+    &lt;/div>
+
+&lt;/body>
+&lt;/html>
+                </code> 
+            </div>  
+            </section>
+        <hr>
+        <p>All texts and information is taken from the 
+            <a href="https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp"> W3Schools website </a> for 
+            informational and educational purposes only.</p>
         </main>
     </body>
     
