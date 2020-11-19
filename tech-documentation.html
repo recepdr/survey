@@ -2,123 +2,175 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <title>SASS Inroduction</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Josefin+Sans&family=Source+Code+Pro&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Source+Code+Pro&display=swap');
-            :root{
-            --primary: #FFE200;
-            --secondary: #222222;
-            --code-color: #39393A;
-            --primary-font: 'Josefin Sans', sans-serif;
-            --code-font: 'Source Code Pro', monospace;
-            }
-            body {
-                color: #ecfff8;
-                background-color: var(--secondary);
-                /*max-width: 100%;*/
-                word-wrap: break-word;
-                font-family: var(--primary-font);
-            }
-            #navbar {
-                background-color: var(--primary);
-                height: 100%;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 200px;
-                display: flex;
-                flex-direction: column;
-                overflow: hidden;
-                z-index: 1;
-            }
-            .nav-link {
-                text-decoration: none;
-                padding: 5px;
-                font-family: var(--primary-font);
-                font-size: 20px;
-                color: var(--secondary);
-            }
-            .nav-link:hover {
-                border: 2px inset var(--secondary);
-                font-weight: bold;
-                color: var(--secondary); 
-            }
-            #non-header {
-                display: none;
-            }
-            .inline-link{
-                color: var(--primary);
-            }
-            .top-header {
-                text-align: center;
-                background-color: var(--code-color);
-                padding: 4px;
-                margin-bottom: 20px;
-                box-shadow: 10px 5px var(--primary);
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Josefin+Sans&family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Source+Code+Pro&display=swap");
+:root {
+  --primary: #ffe200;
+  --secondary: #222222;
+  --code-color: #39393a;
+  --primary-font: "Josefin Sans", sans-serif;
+  --code-font: "Source Code Pro", monospace;
+}
+body {
+  color: #ecfff8;
+  background-color: var(--secondary);
+  /*max-width: 100%;*/
+  word-wrap: break-word;
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+}
+#navbar {
+  background-color: var(--primary);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 5px;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: var(--secondary);
+}
+.nav-link:hover {
+  border: 2px inset var(--secondary);
+  font-weight: bold;
+  color: var(--secondary);
+}
+#non-header {
+  display: none;
+}
+.inline-link {
+  color: var(--primary);
+}
+.top-header {
+  text-align: center;
+  background-color: var(--code-color);
+  padding: 4px;
+  margin-bottom: 20px;
+  box-shadow: 10px 5px var(--primary);
+}
 
-            }
-            
-            #main-doc {
-                background-color: var(--secondary);
-               
-                top: 0;
-                margin-left: 200px;
-                padding-left: 1em;
-                padding-right: 3em;
-                
-                overflow: hidden;
-                font-size: 24px;
-            }
-            header {
-                font-size: 25px;
-                text-decoration: underline overline dotted var(--primary);
-                text-align: center;
-            }
-            .code {
-                width: 100%;
-                background-color: var(--code-color);
-                padding: 1em;
-                display: flex;
-                overflow: hidden;
-                word-wrap: break-word;
-                justify-content: center;
-                border: 2px solid var(--primary);
-            }
+#main-doc {
+  background-color: var(--secondary);
 
-            code {
-                white-space: pre-wrap;
-                justify-content: center;
-                font-family: var(--code-font);
-                font-size: medium;
-                
-            }
-            .sample-colors {
-                display: block;
-                align-items: center;
-                width: 100%;
-                font-family: var(--code-font);
-            }
-            #color1 {
-                background-color: #e90183;
-                padding: 0.5em;
-            }
-            #color2 {
-                background-color: #872485;
-                padding: 0.5em;
-            }
-            #color3 {
-                background-color: #502784;
-                padding: 0.5em;
-            }
-            @media screen and (max-width: 799px) {
-                .top-header {
-                    font-size: smaller;
-                }
-                .code {
-                    word-break: break-word;
-                }
-            }
+  top: 0;
+  margin-left: 200px;
+  padding-left: 1em;
+  padding-right: 3em;
+
+  overflow: hidden;
+  font-size: 24px;
+}
+header {
+  font-size: 25px;
+  text-decoration: underline overline dotted var(--primary);
+  text-align: center;
+}
+.code {
+  width: 100%;
+  background-color: var(--code-color);
+  padding: 1em;
+  display: flex;
+  overflow: hidden;
+  word-wrap: break-word;
+  justify-content: center;
+  border: 2px solid var(--primary);
+}
+
+code {
+  white-space: pre-wrap;
+  justify-content: center;
+  font-family: var(--code-font);
+  font-size: medium;
+}
+.sample-colors {
+  display: block;
+  align-items: center;
+  width: 100%;
+  font-family: var(--code-font);
+}
+#color1 {
+  background-color: #e90183;
+  padding: 0.5em;
+}
+#color2 {
+  background-color: #872485;
+  padding: 0.5em;
+}
+#color3 {
+  background-color: #502784;
+  padding: 0.5em;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--code-color); 
+}
+
+i {
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 15px;
+  border-radius: 50%;
+  margin-top: 1em;
+  float: right;
+}
+i:hover {
+  border: 5px double var(--primary);
+  font-weight: bold;
+}
+@media screen and (max-width: 799px) {
+  .top-header {
+    font-size: 15px;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    margin: 0px;
+  }
+  .code {
+    word-break: break-word;
+  }
+  
+  #navbar {
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    text-align: center;
+    box-shadow: 10px 5px var(--code-color);
+  }
+  #main-doc {
+    margin: auto;
+  }
+  #first-header {
+    margin-top: 1em;
+  }
+  code {
+    font-size: small;
+  }
+}
 
         </style>
     </head>
@@ -128,8 +180,18 @@
             <div class="top-header">
                 <h1>Sass Introduction</h1>
             </div>
+            <nav id="navbar">
+                <header id="non-header">Sass Introduction</header>
+                <a class="nav-link" href="#what_you_should_already_know?">What You Should Already Know?</a>
+                <a class="nav-link" href="#what_is_sass?">What is Sass?</a>
+                <a class="nav-link" href="#why_use_sass?">Why Use Sass?</a>
+                <a class="nav-link" href="#why_sass_is_useful?">Why Sass is Useful?</a>
+                <a class="nav-link" href="#how_does_sass_work?">How Does Sass Work?</a>
+                <a class="nav-link" href="#sass_file_type">Sass File Type</a>
+                <a class="nav-link" href="#sass_comments">Sass Comments</a>
+            </nav>
             <section class="main-section" id="what_you_should_already_know?">
-                <header>What You Should Already Know?</header>
+                <header id="first-header">What You Should Already Know?</header>
                 <p>Before you continue you should have a basic understanding of the following:</p>
                 <ul>
                     <li>HTML</li>
@@ -257,16 +319,10 @@ background-color: $primary_1; // here you can put an inline comment
                     </code>
                 </div>
             </section>
+            <div class="back-to-top">
+                <a href="#"><i class="fas fa-angle-double-up"></i></a>
+            </div>
         </main>
-        <nav id="navbar">
-            <header id="non-header">Sass Introduction</header>
-            <a class="nav-link" href="#what_you_should_already_know?">What You Should Already Know?</a>
-            <a class="nav-link" href="#what_is_sass?">What is Sass?</a>
-            <a class="nav-link" href="#why_use_sass?">Why Use Sass?</a>
-            <a class="nav-link" href="#why_sass_is_useful?">Why Sass is Useful?</a>
-            <a class="nav-link" href="#how_does_sass_work?">How Does Sass Work?</a>
-            <a class="nav-link" href="#sass_file_type">Sass File Type</a>
-            <a class="nav-link" href="#sass_comments">Sass Comments</a>
-        </nav>
+        
     </body>
 </html>

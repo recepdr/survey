@@ -3,8 +3,9 @@
     <head>
         <style>
             
-            body {
+            body, html {
                 background-color: #E8F7EE;
+                scroll-behavior: smooth;
             }
             #navbar{
             height: 100%;
@@ -126,6 +127,27 @@
                 font-size: 28px;
                 font-weight: bold;
             }
+            .arrow {
+            border: solid#fafafa;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            }
+            .up {
+             transform: rotate(-135deg);
+             -webkit-transform: rotate(-135deg);
+                }
+            .back_to_top {
+                background-color: #7C77B9;
+                position: fixed;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+                font-size: 15px;
+                font-family: 'Poppins', sans-serif;
+                display: none;
+            }           
             @media screen and (max-width: 799px) {
                 .top_header {
                     top: 0;
@@ -154,13 +176,18 @@
                 font-size: 20px; 
                 font-family: 'Poppins', sans-serif;
                 justify-content: center;
-            }
+                }
+                .back_to_top {
+                    display: initial;
+                } 
+
             }
         </style>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="back_to_top"><a class="nav-link" href="#"><p><i class="arrow up"></i> Back to top</p></a></div>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
         <header class="top_header">Bootstrap 4 Get Started</header>
         <nav id="navbar">
@@ -176,11 +203,14 @@
             </ul>
         </nav>
         <main id="main-doc">
+            
             <section class="main-section" id="What_is_Bootstrap?"><header class="g_head">What is Bootstrap?</header>
+                <ul>
                 <li>Bootstrap is a free front-end framework for faster and easier web development</li>
                 <li>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables,
                  navigation, modals, image carousels and many other, as well as optional JavaScript plugins</li>
                 <li>Bootstrap also gives you the ability to easily create responsive designs</li>
+            </ul>
             <div class="note">
                 <h4>What is Responsive Web Design?</h4>
                 <p>Responsive web design is about creating web sites which automatically 
@@ -346,8 +376,8 @@
                 <header class="g_head">Two Basic Bootstrap 4 Pages</header>
             <p>The following example shows the code for a basic Bootstrap 4 page (with a responsive fixed width container):</p>
                 <div class="codebox">
-                    <code class="code">
-                        <h4><u>Container Example</u></h4>
+                    <h4><u>Container Example</u></h4>
+                    <code class="code">         
 &lt;!DOCTYPE html>
 &lt;html lang="en">
 &lt;head>
